@@ -1,0 +1,31 @@
+name: Java CI - Postulantes CRUD
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+
+    - name: Compile Java project
+      run: |
+        echo "Compilando proyecto Java..."
+        find src -name "*.java" > sources.txt
+        javac @sources.txt
+
+    - name: ✅ Build exitoso
+      run: echo "Proyecto compilado correctamente"
