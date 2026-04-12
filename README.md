@@ -1,5 +1,7 @@
 # CRUD Postulantes – Java y PostgreSQL
 
+![Maven CI](https://github.com/VicHZR/postulantes-crud-java/actions/workflows/maven-ci.yml/badge.svg)
+
 Proyecto académico que implementa un sistema CRUD de postulantes usando:
 
 - Java (Consola)
